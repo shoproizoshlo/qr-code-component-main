@@ -1,0 +1,73 @@
+/* 
+## Colors
+
+- White: hsl(0, 0%, 100%)
+- Light gray: hsl(212, 45%, 89%)
+- Grayish blue: hsl(220, 15%, 55%)
+- Dark blue: hsl(218, 44%, 22%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 15px
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 400, 700 */
+:root {
+  --colors-white: hsl(0, 0%, 100%);
+  --colors-light-gray: hsl(212, 45%, 89%);
+  --colors-grayish-blue: hsl(220, 15%, 55%);
+  --colors-dark-blue: hsl(218, 44%, 22%);
+}
+body {
+  background-color: var(--colors-light-gray);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 270px;
+  margin: 10% auto 10px auto;
+  padding: 15px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: var(--colors-white);
+  border-radius: 15px;
+  color: var(--colors-dark-blue);
+}
+.qr-code {
+  flex: 2;
+  background-image: url(/images/image-qr-code.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+.text {
+  flex: 1;
+  padding: 0;
+  text-align: center;
+}
+.headline {
+  font-weight: 700;
+  font-size: 21px;
+}
+.description {
+  color: var(--colors-grayish-blue);
+  padding: 0 10px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width: 600px) {
+  .card {
+    margin: 20% auto 5px auto;
+  }
+}
